@@ -36,7 +36,7 @@ buttons.forEach((element)=>{
 		}).prop('token',element).css("color",element).prop('disabled',true));
 })
 
-$('#body').append($('<button></button').attr('id','start').click(
+$('#body').append($('<input>').attr('id','start').click(
 	(event)=>{
 		PlayerSequence = [];
 		MemorySequence = [];
@@ -46,7 +46,7 @@ $('#body').append($('<button></button').attr('id','start').click(
 		$('#status').text('');
 		_round();
 		$('#start').prop('disabled',true);
-	}).text('start').addClass('button'));
+	}).prop('token','start'));
 
 
 function userChoice(button,actual){

@@ -8,6 +8,7 @@
 	background-repeat: no-repeat;
 	background-position: center;
 	background-color: transparent;
+	z-index: 0;
 }
 
 .button:active{
@@ -19,6 +20,10 @@
     width: 50vw;
     height: 50vw;
     border-radius: 100%;
+    position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%,-50%);
 }
 
 .red{
@@ -38,8 +43,14 @@
 .green{
 	background-image: url('./Green.png');
 	display: inline;
+
 }
 
-.start{
+#start{
 	background-image: url('./Start.png');
+	position: fixed;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	z-index: 1;
 }
