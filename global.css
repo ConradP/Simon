@@ -1,0 +1,45 @@
+
+.button{
+	height:50%;
+	width:50%;
+	padding: 0px 0px 0px 0px;
+	border:none;
+	background-size: 90% 90%;
+	background-repeat: no-repeat;
+	background-position: center;
+	background-color: transparent;
+}
+
+.button:active{
+	transform: translateY(4px);
+}
+
+#body{
+	background-color:black;
+    width: 50vw;
+    height: 50vw;
+    border-radius: 100%;
+}
+
+.red{
+	background-image: url('./Red.png');
+
+}
+
+.yellow{
+	background-image: url('./Yellow.png');
+	display: inline;
+}
+
+.blue{
+	background-image: url('./Blue.png');
+}
+
+.green{
+	background-image: url('./Green.png');
+	display: inline;
+}
+
+.start{
+	background-image: url('./Start.png');
+}
