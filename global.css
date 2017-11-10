@@ -9,6 +9,7 @@
 	background-position: center;
 	background-color: transparent;
 	z-index: 0;
+	outline: none;
 }
 
 .button:active{

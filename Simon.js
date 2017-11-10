@@ -3,14 +3,12 @@ PlayerSequence = [];
 MemorySequence = [];
 var level,score;
 
-function _unBlink(button,oldColor){
-	button.css('color',button.attr('id'));
-	button.css('background-color',oldColor);
+function _unBlink(button){
+	button.css('filter','brightness(.5)');
 }
 function blink(button){
-	var oldColor = button.css('background-color');
-	button.css('color','black').css('background-color',button.attr('id'));
-	setTimeout(function(){_unBlink(button,oldColor)},500);
+	button.css('filter','brightness(1)');
+	setTimeout(function(){_unBlink(button)},500);
 }
 
 
@@ -33,7 +31,10 @@ buttons.forEach((element)=>{
 				_gameOver();
 
 			})
-		}).prop('token',element).css("color",element).prop('disabled',true));
+		}).prop('token',element).
+			css("color",element).
+			prop('disabled',true).
+			css('filter','brightness(.5)'));
 })
 
 $('#body').append($('<input>').attr('id','start').click(
