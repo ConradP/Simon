@@ -1,5 +1,5 @@
 
-.button{
+.gameButtons{
 	height:50%;
 	width:50%;
 	padding: 0px 0px 0px 0px;
@@ -12,7 +12,7 @@
 	outline: none;
 }
 
-.button:active{
+.gameButtons:active{
 	transform: translateY(4px);
 }
 
@@ -47,11 +47,18 @@
 
 }
 
-#start{
+#Start{
 	background-image: url('./Start.png');
+	background-color: black;
+	border: none;
+	background-position: center;
+	background-size: contain;
+	background-repeat: no-repeat;
 	position: fixed;
-	top:50%;
-	left:50%;
+	top:58%;
+	left:58%;
+	width:8%;
+	height:8%;
 	transform: translate(-50%,-50%);
 	z-index: 1;
 }

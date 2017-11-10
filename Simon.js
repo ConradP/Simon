@@ -13,7 +13,7 @@ function blink(button){
 
 
 buttons.forEach((element)=>{
-	$('#body').append($('<input>').attr('id',element).addClass('button').addClass(element).click(
+	$('#body').append($('<input>').attr('id',element).addClass('gameButtons').addClass(element).click(
 		(event)=>{
 			blink($(event.target));
 			userChoice($(event.target),MemorySequence[PlayerSequence.length]).then((resolve)=>{
@@ -47,7 +47,8 @@ $('#body').append($('<input>').attr('id','start').click(
 		$('#status').text('');
 		_round();
 		$('#start').prop('disabled',true);
-	}).prop('token','start'));
+	}).prop('token','start').
+		attr('id','Start'));
 
 
 function userChoice(button,actual){
