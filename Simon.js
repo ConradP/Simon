@@ -4,18 +4,17 @@ MemorySequence = [];
 var level,score;
 
 function _unBlink(button){
-	button.css('filter','brightness(.5)');
+	button.removeAttr('style');
 }
 function blink(button){
-	button.css('filter','brightness(1)');
+	button.css('filter','brightness(2)');
 	setTimeout(function(){_unBlink(button)},500);
 }
 
 
 buttons.forEach((element)=>{
-	$('#body').append($('<input>').attr('id',element).addClass('gameButtons').addClass(element).click(
+	$('#body').append($('<button>').attr('id',element).addClass('gameButtons').addClass(element).click(
 		(event)=>{
-			blink($(event.target));
 			userChoice($(event.target),MemorySequence[PlayerSequence.length]).then((resolve)=>{
 				$('#score').text(++score);
 				$('#status').text('');
@@ -33,11 +32,10 @@ buttons.forEach((element)=>{
 			})
 		}).prop('token',element).
 			css("color",element).
-			prop('disabled',true).
-			css('filter','brightness(.5)'));
+			prop('disabled',true));
 })
 
-$('#body').append($('<input>').attr('id','start').click(
+$('#body').append($('<button>').attr('id','start').click(
 	(event)=>{
 		PlayerSequence = [];
 		MemorySequence = [];
